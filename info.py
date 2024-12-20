@@ -1,3 +1,4 @@
+
 import re
 from os import environ
 from dotenv import load_dotenv
@@ -14,25 +15,25 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = ''
-API_HASH = ''
-BOT_TOKEN = ''
+API_ID = '20402157 '
+API_HASH = 'e047c58a2366477506587eb31852b200'
+BOT_TOKEN = '7829698255:AAHyH0KL7hqJrpKRsy3uENS-7xOSk60l9ZA'
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
-PICS = (environ.get('PICS', 'https://telegra.ph/file/0e9b4a6e8d50b39c2a207.jpg https://telegra.ph/file/045eab7f66c7d236f908d.jpg')).split()
+PICS = (environ.get('PICS', 'https://envs.sh/8Mb.jpg https://envs.sh/8Mi.jpg https://envs.sh/8MP.jpg https://envs.sh/8Mq.jpg https://envs.sh/8M0.jpg https://envs.sh/8MS.jpg https://envs.sh/8MW.jpg https://envs.sh/8MI.jpg https://envs.sh/8Mn.jpg https://envs.sh/8MT.jpg https://envs.sh/8Mp.jpg https://envs.sh/8Mj.jpg https://envs.sh/8Mc.jpg https://envs.sh/8MZ.jpg https://envs.sh/8M5.jpg')).split()
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5793708681 5531461861').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1001833247384').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5148546676 5531461861 5611425488').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://MAYFLOWER:MAYFLOWER@cluster0.nv45v.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
@@ -46,7 +47,7 @@ JOIN_REQS_DB = environ.get("JOIN_REQS_DB", DATABASE_URI)
 DELETE_TIMEOUT = int(environ.get('DELETE_TIMEOUT', 2*60*60)) # 2 hours in seconds
 
 # Others
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', -1001869718840))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', -1002355632545))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'CINEMAHUB_NEW_MOVIES')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
 IMDB = is_enabled((environ.get('IMDB', "False")), False)
@@ -54,10 +55,8 @@ SINGLE_BUTTON = is_enabled((environ.get('SINGLE_BUTTON', "False")), False)
 CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", """<b>📂Fɪʟᴇɴᴀᴍᴇ : {file_name}</b>
 
 ╔════ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ════╗
-<a href=t.me/+b7rSipdVyeE0MWNl>▫️ ᴄʜᴀɴɴᴇʟ </a>
-<a href=t.me/film_cube_group_main>▫️ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ 1</a>
-<a href=t.me/filmcube_group>▫️ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ 2</a>
-<a href=t.me/filmcubee_group>▫️ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ 3 </a>
+<a href=t.me/Film_Maniac>▫️ ᴄʜᴀɴɴᴇʟ </a>
+<a href=t.me/Film_Maniac>▫️ sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ </a>
 ╚════ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ════╝""") 
 
 
